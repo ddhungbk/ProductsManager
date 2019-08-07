@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="570.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bk.hungd.Controller.UpdateController">
+	<children>
+		<TabPane fx:id="tabContents" layoutX="8.0" layoutY="40.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<tabs>
+				<Tab fx:id="tabBrands" text="             Brands             ">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+				<Tab fx:id="tabCategories" text="         Categories          ">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+				<Tab fx:id="tabModels" text="            Models          ">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+				<Tab fx:id="tabProducts" text="          Products         ">
+					<content>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+		<Button fx:id="btRefresh" mnemonicParsing="false" text="Refresh" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="2.0" />
+	</children>
+</AnchorPane>

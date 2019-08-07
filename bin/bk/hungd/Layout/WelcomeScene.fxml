@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="315.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bk.hungd.Controller.WelcomeController">
+	<children>
+		<Text layoutX="-1.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome To Dolphin Technology" textAlignment="CENTER" wrappingWidth="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+			<font>
+				<Font name="Gabriola" size="25.0" />
+			</font>
+		</Text>
+		<Label fx:id="lbInput1" text="Workspace" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="122.0" />
+		<TextField fx:id="tfInput1" prefHeight="32.0" prefWidth="252.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="116.0" />
+		<Label fx:id="lbInput2" text="Database" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="164.0" />
+      <TextField fx:id="tfInput2" prefHeight="32.0" prefWidth="100.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="158.0" />
+		<PasswordField fx:id="tfPassword" prefHeight="32.0" prefWidth="252.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="158.0" />
+      <Button fx:id="btBrowse1" mnemonicParsing="false" prefHeight="32.0" prefWidth="27.0" text="&gt;" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="116.0" />
+      <Button fx:id="btBrowse2" mnemonicParsing="false" prefHeight="32.0" prefWidth="27.0" text="&gt;" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="158.0" />
+		<Label fx:id="lbStatus" prefHeight="25.0" prefWidth="258.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="64.0" AnchorPane.topAnchor="198.0" />
+      <CheckBox fx:id="cbSaveInfo" layoutX="25.0" layoutY="260.0" mnemonicParsing="false" text="Save information?" AnchorPane.leftAnchor="24.0" />
+		<Button fx:id="btAction" layoutX="215.0" layoutY="253.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="74.0" text="Next" AnchorPane.rightAnchor="126.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btExit" layoutX="292.0" layoutY="253.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" text="Exit" AnchorPane.rightAnchor="64.0" />
+      <Button fx:id="btBack" layoutX="152.0" layoutY="253.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="50.0" text="&lt;&lt;" AnchorPane.rightAnchor="210.0" />
+	</children>
+</AnchorPane>

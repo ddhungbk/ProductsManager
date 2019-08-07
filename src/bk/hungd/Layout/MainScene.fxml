@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="bk.hungd.Controller.MainController">
+	<children>
+		<AnchorPane prefHeight="50.0" prefWidth="750.0"
+			AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+			AnchorPane.topAnchor="0.0">
+			<children>
+				<Pane prefHeight="50.0" prefWidth="200.0"
+					AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+					AnchorPane.topAnchor="0.0">
+					<children>
+						<Button fx:id="btCreateDb" layoutX="14.0" layoutY="14.0"
+							mnemonicParsing="false" onAction="#createDatabase" text="Create" />
+						<Button fx:id="btLoadDb" layoutX="79.0" layoutY="14.0"
+							mnemonicParsing="false" onAction="#showDatabase" text="Load" />
+					</children>
+				</Pane>
+				<TextField layoutX="345.0" layoutY="11.0" prefHeight="30.0"
+					prefWidth="350.0" promptText="Enter brands, categories, products, etc."
+					AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="10.0" />
+				<Button layoutX="616.0" layoutY="10.0" mnemonicParsing="false"
+					prefHeight="30.0" prefWidth="60.0" text="Search"
+					AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="10.0" />
+				<SplitMenuButton fx:id="btAccount" ellipsisString=""
+					layoutX="658.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0"
+					prefWidth="76.0" text="User" AnchorPane.bottomAnchor="10.0"
+					AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Action 1" />
+						<MenuItem mnemonicParsing="false" text="Action 2" />
+					</items>
+				</SplitMenuButton>
+			</children>
+		</AnchorPane>
+		<SplitPane fx:id="sppContents" dividerPositions="0.2"
+			layoutY="79.0" stylesheets="/bk/hungd/Layout/splitpane.css"
+			AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+			AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefWidth="200.0">
+					<children>
+						<AnchorPane prefHeight="26.0" prefWidth="200.0"
+							AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+							AnchorPane.topAnchor="0.0">
+							<children>
+								<ToggleButton fx:id="btSoftBrands" minHeight="-Infinity"
+									mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0"
+									AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0"
+									AnchorPane.topAnchor="5.0" />
+								<Label alignment="CENTER" contentDisplay="CENTER"
+									prefHeight="26.0" prefWidth="160.0" text="Brands"
+									AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="24.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+						<VBox fx:id="paneBrands" prefHeight="179.0" prefWidth="153.0"
+							AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+							AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0" />
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+					prefWidth="100.0">
+					<children>
+						<HBox prefHeight="25.0" prefWidth="455.0"
+							AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+							AnchorPane.topAnchor="0.0">
+							<children>
+								<Button fx:id="btHome" mnemonicParsing="false" text="   Home   " />
+								<HBox fx:id="paneCategories" alignment="CENTER_LEFT"
+									prefHeight="25.0" />
+							</children>
+						</HBox>
+						<ToggleButton fx:id="btSoftCategories" minHeight="-Infinity"
+							mnemonicParsing="false" prefHeight="16.0" prefWidth="16.0"
+							AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="5.0"
+							prefWidth="100.0" AnchorPane.leftAnchor="0.0"
+							AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+							<children>
+								<ProgressBar fx:id="progress" prefHeight="5.0"
+									progress="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+								</ProgressBar>
+							</children>
+						</AnchorPane>
+						<ScrollPane fx:id="spContents" hbarPolicy="NEVER"
+							prefHeight="394.0" prefViewportHeight="414.0" prefViewportWidth="529.0"
+							prefWidth="521.0" AnchorPane.bottomAnchor="0.0"
+							AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+							AnchorPane.topAnchor="30.0">
+							<content>
+								<TilePane fx:id="paneContents" hgap="20.0" prefHeight="375.0"
+									prefWidth="581.0" style="-fx-background-color: #696969;" vgap="20.0"
+									BorderPane.alignment="TOP_LEFT">
+									<padding>
+										<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+									</padding>
+								</TilePane>
+							</content>
+						</ScrollPane>
+
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>
